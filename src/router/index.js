@@ -1,9 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import 'swiper/dist/css/swiper.css'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// require styles
+Vue.use(VueAwesomeSwiper)
+Vue.use(swiper)
+Vue.use(swiperSlide)
 Vue.use(VueRouter)
-
 const routes = [{
         path: '/',
         name: 'Home',
