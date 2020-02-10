@@ -14,24 +14,13 @@
 <script> 
 export default {
      name:"HomeIcons",
-     data (){  
-         return {
-             iconList:[
-             {id :'001',name:'酒店',imgUrl:'https://s.qunarzz.com/homenode/images/touchheader/hotel.png'},
-             {id :'002',name:'机票',imgUrl:'https://s.qunarzz.com/homenode/images/touchheader/flight.png'},
-             {id :'003',name:'度假',imgUrl:'https://s.qunarzz.com/homenode/images/touchheader/hotel.png'},
-             {id :'004',name:'景点门票',imgUrl:'https://s.qunarzz.com/homenode/images/touchheader/package.png'},
-             {id :'005',name:'酒店',imgUrl:'https://s.qunarzz.com/homenode/images/touchheader/hotel.png'},
-             {id :'006',name:'酒店',imgUrl:'https://s.qunarzz.com/homenode/images/touchheader/hotel.png'},
-             {id :'007',name:'酒店',imgUrl:'https://s.qunarzz.com/homenode/images/touchheader/hotel.png'},
-             {id :'008',name:'酒店',imgUrl:'https://s.qunarzz.com/homenode/images/touchheader/hotel.png'},
-             {id :'009',name:'酒店',imgUrl:'https://s.qunarzz.com/homenode/images/touchheader/hotel.png'},]
-         }
+     props:{
+      iconsList:Array
      },
      computed:{
          pages(){
         let pages=[]
-         this.iconList.forEach((item,index)=>{
+         this.iconsList.forEach((item,index)=>{
         let page=Math.floor(index/8)
         if(!pages[page]){
          pages[page]=[]

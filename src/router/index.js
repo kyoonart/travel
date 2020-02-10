@@ -4,7 +4,10 @@ import Home from '../views/Home.vue'
 import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-// require styles
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+    // require styles
 Vue.use(VueAwesomeSwiper)
 Vue.use(swiper)
 Vue.use(swiperSlide)
