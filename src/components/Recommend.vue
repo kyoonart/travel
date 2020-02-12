@@ -1,7 +1,8 @@
 <template>
     <div>
-    <div class="title">热销推荐</div>
-     <div class="items">
+    <div class="title title2">热销推荐</div>
+    <router-link to="/detail" tag="div">
+         <div class="items">
             <div class="item left">
             <img src="https://imgs.qunarzz.com/vs_ceph_vs_tts/bc10122e-0a82-4f09-8a1f-d1a4f751e326.jpg_r_390x260x90_59ae996a.jpg" alt="">
             <div class="info"><p class="address">北京-峨眉山 5天跟团游</p>
@@ -15,6 +16,7 @@
               <p class="money">￥4799起</p></div>
              </div>
 </div>
+    </router-link>
 <!-- 热门景点 -->
  <div class="title title2">当季热门景点</div>
      <div class="items">

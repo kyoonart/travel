@@ -4,20 +4,20 @@
          <div class="area">
                 <div class="title">当前城市</div>
                 <div class="buttonlist">   
-                <button>北京</button>   
+                <button>{{this.$store.state.city}}</button>   
                 </div>   
             </div>  
             <div class="area"> 
                 <div class="title">热门城市</div>
                 <div class="buttonlist">
-                    <button v-for="item in hotcity" :key="item.id">{{item.name}}</button> 
+                    <button v-for="item in hotcity" :key="item.id" @click="handleClick(item.name)">{{item.name}}</button> 
                 </div>
             </div>
             <div class="area" v-for="(item,key) of citydata" :key="key" :ref="key">  
                 <div class="title">{{key}}</div>
                 <div class="lists">
                  <ul>
-                     <li v-for="ind in item" :key="ind.id">
+                     <li v-for="ind in item" :key="ind.id" @click="handleClick(ind.name)">
                             {{ind.name}}
                         </li>
                     </ul>  
@@ -45,6 +45,13 @@ export default {
                this.scroll.scrollToElement(element)
             }
         }
+    },
+    methods:{
+        handleClick(mess){
+            this.$store.commit('changeCity',mess);
+               this.$router.push('/')
+        }
+
     }
 }
 </script>

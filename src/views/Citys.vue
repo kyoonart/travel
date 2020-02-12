@@ -15,7 +15,8 @@ export default {
     components: {
         city,
         CityList,
-        Alphabet
+        Alphabet,
+        
     },
     data() {
         return {
@@ -38,9 +39,11 @@ export default {
             this.message = letter
         }
     },
-    mounted() {
+    mounted() {       
         this.getCityInfo()
-    }
+      
+    },
+   
 }
 </script>
 <style scoped>

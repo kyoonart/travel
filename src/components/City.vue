@@ -6,7 +6,7 @@
      <div class="input"><input class ="input-search" type="text" placeholder="请输入要查询的城市" v-model="keyword">
      <div class="search-content" ref="wapper" v-show="keyword">
      <div>  <ul>
-       <li v-for="item in list" :key="item.id">{{item.name}}</li>
+       <li v-for="item in list" :key="item.id" @click="handleClick(item.name)">{{item.name}}</li>
        </ul>
        <ul><li v-show="!list.length">没有找到数据哦</li></ul></div>
        </div>    
@@ -29,6 +29,12 @@ data (){
      list:[],
      timer:null
    }
+    },
+    methods:{
+      handleClick(city){
+        this.$store.commit('changeCity',city);
+        this.$router.push('/')
+      }
     },
     watch:{
        keyword(){
