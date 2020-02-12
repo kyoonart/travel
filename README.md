@@ -26,9 +26,6 @@
 &emsp;&emsp;&emsp;src/App.vue -- 项目的根组件
 
 &emsp;&emsp;&emsp;src/main.js -- 项目的入口文件
-
-&emsp;static文件 -- 里面的文件不会被webpack打包处理，而是被直接复制到最终目录（dist/static）下
-
 &emsp;index.html -- 默认页面
 
 
